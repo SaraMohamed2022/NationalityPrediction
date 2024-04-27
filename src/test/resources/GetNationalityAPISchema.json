@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "country": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "country_id": {
+                "type": "string"
+              },
+              "probability": {
+                "type": "number"
+              }
+            },
+            "required": ["country_id", "probability"]
+          }
+        }
+      },
+      "required": ["count", "name", "country"]
+    },
+    {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "country": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "country_id": {
+                  "type": "string"
+                },
+                "probability": {
+                  "type": "number"
+                }
+              },
+              "required": ["country_id", "probability"]
+            }
+          }
+        },
+        "required": ["count", "name", "country"]
+      }
+    }
+  ]
+}

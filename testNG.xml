@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API Test Suite" verbose="1">
+    <listeners>
+        <listener class-name="testReporting.TestListener"/>
+    </listeners>
+    <test name="Get nationality API Tests">
+        <classes>
+            <class name="getNationality.API.GetNationalityPropabilityNegativeTestCases"/>
+            <class name="getNationality.API.GetNationalityTestCases"/>
+            <!-- Add more test classes here -->
+        </classes>
+    </test>
+</suite>
